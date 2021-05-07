@@ -1,0 +1,842 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+:root {
+  --first-color: #3c6097;
+  --first-alpha-color: rgba(60, 96, 151, 0.85);
+  --second-color: #141414;
+  --second-alpha-color: rgba(20, 20, 20, 0.71);
+  --third-color: #00c896;
+  --third-alpha-color: rgba(0, 200, 150, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --black-gray-color: #222;
+  --link-color: #f3f3f3;
+  --title-color: #f2ecff;
+  --text-dark-color: #222;
+  --text-light-color: #f3f3f3;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Open Sans", sans-serif;
+  --max-width: 1024px;
+  --header-height: 4rem;
+}
+/* -----Resets------ */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: #121212;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text-dark-color);
+}
+
+a {
+  color: var(--link-color);
+  transition: all 0.5s ease-out;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ------ Components ------- */
+/* ------- Hamburguer Menu -------- */
+.menu-btn {
+  position: fixed;
+  bottom: 2vw;
+  left: 2vw;
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #000;
+  font-size: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid var(--black-color);
+  text-align: center;
+  padding-top: 0.23rem;
+  padding-right: 0.2rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(100vh);
+  z-index: 997;
+  transition: transform 0.5s ease;
+  background-color: var(--first-alpha-color);
+}
+
+.menu-nav a {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--link-color);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.menu-nav a:hover {
+  color: var(--text-color);
+  background-color: var(--gray-light-color);
+}
+
+.btn-effect {
+  transform: rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+.is-active {
+  transform: translateY(35vh);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 992px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  .menu-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    transform: translateY(0);
+    width: 65%;
+    margin-right: 2rem;
+  }
+
+  .menu-nav a {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .menu-nav a:hover {
+    color: var(--text-color);
+    background-color: var(--gray-light-color);
+  }
+}
+
+/* -------- Hero Image --------- */
+.home {
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  background-image: url(img/hero-image-home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black-alpha-color);
+}
+
+.hero-image-title {
+  font-size: 7.5vw;
+  color: var(--text-light-color);
+}
+
+/* ------ Modal ------- */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  color: var(--text-light-color);
+  padding: 1rem;
+  z-index: 1000;
+  transition: all 0.8s ease;
+}
+
+.modal-content {
+  padding: 1rem;
+  background-color: var(--first-color);
+  position: absolute;
+  top: 5vh;
+  left: 16px;
+  bottom: 5vh;
+  right: 16px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  margin: 0 auto;
+  z-index: 1000;
+  transition: all 0.8s ease;
+  max-width: var(--max-width);
+}
+
+.modal-content h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+}
+
+.modal-content img {
+  max-width: 350px;
+}
+
+.none {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: 11vh;
+  right: 1rem;
+  z-index: 1002;
+  margin: 0 auto;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--gray-color);
+}
+
+.modal#gracias .modal-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  line-height: 3rem;
+  top: 25vh;
+  bottom: 25vh;
+  right: 20vw;
+  left: 20vw;
+}
+
+.modal#gracias .modal-content svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: var(--gray-light-color);
+}
+
+@media screen and (min-width: 568px) {
+  .modal-content {
+    top: 5vh;
+    left: 5vw;
+    bottom: 5vh;
+    right: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows: 48% 48%;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+  }
+
+  .modal-content h4 {
+    font-size: 1.6rem;
+    margin-top: -2rem;
+    margin-bottom: 0;
+  }
+
+  .modal-content p {
+    justify-content: start;
+    margin-top: -3rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-content img {
+    grid-row: span 2;
+    order: -1;
+  }
+
+  .modal-close {
+    top: 6vh;
+    right: 6vw;
+  }
+
+  .modal#gracias .modal-content {
+    top: 30vh;
+    bottom: 30vh;
+    right: 30vw;
+    left: 30vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modal-content {
+    left: 16px;
+    right: 16px;
+  }
+
+  .modal-content h4 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .modal-content p {
+    margin-top: 0;
+  }
+
+  .modal-content img {
+    max-width: 500px;
+  }
+
+  .modal-close {
+    right: 1.5rem;
+  }
+}
+
+/* ------- Utilities ------- */
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  color: var(--text-light-color);
+  background-color: var(--first-color);
+}
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
+}
+
+.box-shadow-2 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.section-title {
+  max-width: 250px;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: var(--title-color);
+  border-top: 2px solid var(--title-color);
+  border-bottom: 2px solid var(--title-color);
+}
+/* ------- Site Styles --------*/
+.header {
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--first-color);
+  z-index: 995;
+}
+
+.header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header h2 {
+  color: var(--link-color);
+  width: 30%;
+  padding-left: 1rem;
+}
+
+/* ------- Seccion Nosotros ------- */
+.nosotros {
+  padding: 1rem;
+  color: var(--text-light-color);
+  margin-bottom: 2rem;
+}
+
+.nosotros-container {
+  margin: 0 auto;
+}
+
+.nosotros-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.nosotros-content {
+  display: grid;
+}
+
+.nosotros-content p {
+  margin: 2rem 0;
+}
+
+.nosotros-content p span {
+  font-weight: bold;
+  color: var(--white-color);
+}
+
+/* --------- Seccion de Productos --------*/
+.products {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2.2rem;
+  color: var(--gray-light-color);
+  background-color: var(--third-alpha-color);
+}
+
+.products-container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.product-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.products-container h2 {
+  color: var(--gray-light-color);
+  border-bottom: 2px solid var(--gray-light-color);
+  border-top: 2px solid var(--gray-light-color);
+  margin-top: 2rem;
+}
+.product-card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.product-card svg {
+  margin-bottom: 2rem;
+  fill: var(--gray-light-color);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* ---------- Seccion de Planes ---------- */
+.planes {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-light-color);
+}
+
+.planes-container {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  text-align: center;
+}
+
+.planes-card {
+  cursor: pointer;
+}
+
+.planes-card:hover {
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.planes-card:hover h4 {
+  color: var(--first-color);
+  transition: all 0.3s ease;
+}
+
+.planes-card h4 {
+  padding: 0.5rem 0;
+  font-size: 6vw;
+}
+
+.planes-card img[src="img/plan-metro.jpg"] {
+  height: 56vw;
+}
+
+/* -------- Seccion de Contacto --------- */
+.contacto {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-light-color);
+}
+
+.container-contacto {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.link-container {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.link-form {
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  transition: 0.4s all ease;
+  max-width: 160px;
+  margin: 0.3rem;
+  border-radius: 2px;
+}
+
+.link-form:hover,
+.link-active {
+  color: var(--text-dark-color);
+  opacity: 0.75;
+  background-color: var(--gray-color);
+}
+
+.container-forms {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.form-contact {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+}
+
+.form-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-content {
+  margin-top: 3rem;
+  background-color: var(--gray-light-color);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 10rem;
+}
+
+.form-content h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark-color);
+}
+
+.zona-options {
+  padding: 0.4rem;
+  color: var(--text-dark-color);
+  display: block;
+}
+
+.select select {
+  padding: 0.3rem;
+  margin-left: 0.2rem;
+}
+
+.form-content input,
+.form-content textarea {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  resize: none;
+  font-family: sans-serif;
+  border: var(--second-color) solid thin;
+  border-radius: 3px;
+}
+
+.form-content input[type="submit"] {
+  width: 50%;
+  max-width: 130px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-contact [required]:valid {
+  border: thin solid var(--form-ok-color);
+}
+
+.form-contact [required]:invalid {
+  border: thin solid var(--form-error-color);
+}
+
+.none-form {
+  display: none;
+}
+
+.form-contact-error {
+  color: var(--form-error-color);
+  margin-top: -0.8rem;
+  font-size: 80%;
+  transition: all 800ms ease;
+}
+
+.form-contact-error.is-active-form {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-in-out;
+}
+
+.contact-form-loader {
+  width: 5rem;
+  height: 5rem;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -120vh;
+  left: 0;
+  width: 100vw;
+  height: 5rem;
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: var(--third-color);
+  color: var(--gray-light-color);
+  text-align: center;
+  z-index: 995;
+}
+
+.footer-container {
+  position: relative;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  .nosotros-content img {
+    height: 80vh;
+    margin: 1.5rem 0;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+    align-content: center;
+    height: 100%;
+  }
+
+  .products-container h2 {
+    grid-column: span 2;
+  }
+
+  .planes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 33%);
+    grid-template-rows: auto auto 160px;
+    justify-content: space-evenly;
+    align-content: space-between;
+  }
+
+  .planes-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .planes-card img[src="img/plan-metro.jpg"] {
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nosotros-content {
+    grid-template-columns: 58% 38%;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nosotros-content img {
+    width: 100%;
+    height: 340px;
+    margin: 1.5rem 0;
+  }
+
+  .nosotros-content img[alt="nosotros 2"] {
+    height: 200px;
+    order: -1;
+  }
+
+  .planes-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .planes-card img[src="img/plan-metro.jpg"] {
+    height: 100%;
+  }
+
+  .link-container {
+    grid-template-columns: repeat(4, 24%);
+  }
+
+  .zona-options {
+    grid-column: span 2;
+  }
+
+  .form-content input[type="submit"] {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nosotros-content {
+    grid-template-columns: 58% 38%;
+    justify-content: space-between;
+    justify-items: center;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nosotros-content img {
+    width: 100%;
+    height: 340px;
+    margin: 1.5rem 0;
+  }
+
+  .nosotros-content img[alt="nosotros 2"] {
+    height: 200px;
+    order: -1;
+  }
+
+  .products {
+    height: 100vh;
+  }
+
+  .planes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: auto 250px;
+  }
+
+  .planes-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .planes-card img[src="img/plan-metro.jpg"] {
+    height: 86%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    bottom: -50vh;
+  }
+}
+
+@media screen and (min-height: 570px) {
+  .footer {
+    bottom: -90vh;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .footer {
+    bottom: -60vh;
+  }
+}
