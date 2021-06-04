@@ -24,13 +24,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   (() => {
     const $modal = d.querySelector(".modal"),
       $modalContent = d.querySelectorAll(".modal-content");
-    /* $modalActive = d.querySelector(`.modal-content img[${e.target.alt}]`); */
 
     $modalContent.forEach((el) => {
       d.addEventListener("click", (e) => {
         //console.log(e.target);
         if (e.target.matches(".planes-card a *")) {
-          //console.log(d.querySelector(`.modal-content [alt="${e.target.alt}"]`).parentElement);
           if (
             e.target.alt === el.lastElementChild.alt ||
             e.target.value === el.firstElementChild.value
@@ -123,7 +121,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
       $gracias.classList.remove("none");
       $formLoader.classList.remove("none-form");
 
-      console.log(e.target);
+      //console.log(e.target);
       fetch("https://formsubmit.co/ajax/eliancarlogm@gmail.com", {
         method: "POST",
         body: new FormData(e.target),

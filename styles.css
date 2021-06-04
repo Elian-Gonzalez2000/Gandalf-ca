@@ -1,150 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-main {
-  display: block;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-a {
-  background-color: transparent;
-}
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-b,
-strong {
-  font-weight: bolder;
-}
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-[type="button"],
-[type="reset"],
-[type="submit"],
-button {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-progress {
-  vertical-align: baseline;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-details {
-  display: block;
-}
-summary {
-  display: list-item;
-}
-template {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 
 :root {
@@ -153,7 +7,7 @@ template {
   --second-color: #141414;
   --second-alpha-color: rgba(20, 20, 20, 0.71);
   --third-color: #00c896;
-  --third-alpha-color: rgba(0, 200, 150, 0.75);
+  --third-alpha-color: rgba(43, 129, 241, 0.75);
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
@@ -235,6 +89,7 @@ h6 {
 img {
   width: 100%;
   height: auto;
+  border-radius: 7px;
 }
 
 p {
@@ -283,11 +138,12 @@ p {
   display: inline-block;
   padding: 1rem;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 300;
   text-align: center;
   color: var(--link-color);
   width: 100%;
   transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
 .menu-nav a:hover {
@@ -531,11 +387,11 @@ p {
 }
 
 .box-shadow-1 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.25);
+  box-shadow: 0.25rem 0.25rem 0.8rem rgba(177, 177, 177, 0.25);
 }
 
 .box-shadow-2 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 
 .section-title {
@@ -568,6 +424,7 @@ p {
   color: var(--link-color);
   width: 30%;
   padding-left: 1rem;
+  font-weight: 300;
 }
 
 /* ------- Seccion Nosotros ------- */
@@ -642,29 +499,31 @@ p {
   margin-bottom: 4rem;
   color: var(--text-light-color);
   min-height: 100vh;
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: center;
 }
 
 .planes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   max-width: var(--max-width);
   text-align: center;
 }
 
 .planes-card {
+  width: 96%;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
 .planes-card:hover {
-  opacity: 0.75;
-  transition: all 0.3s ease;
+  transform: scale(1.1);
+  opacity: .9;
+  transition: all 0.5s ease;
 }
 
 .planes-card:hover h4 {
-  color: var(--first-color);
-  transition: all 0.3s ease;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
 }
 
 .planes-card h4 {
@@ -678,15 +537,36 @@ p {
 
 /* -------- Seccion de Contacto --------- */
 .contacto {
-  padding: 1rem;
   margin-bottom: 2rem;
   color: var(--text-light-color);
 }
 
+.contacto .hero-image {
+  background-image: url(img/hero-image-customers.jpg);
+  height: 800px;
+  min-height: 100vh;
+}
+
+.contacto .hero-image-opacity {
+  width: 100%;
+  height: 800px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black-alpha-color);
+}
+
+.contacto .container-content {
+  height: 800px;
+}
+
 .container-contacto {
-  margin: 0 auto;
+  margin: auto;
   max-width: 900px;
   text-align: center;
+  padding: 1rem;
 }
 
 .link-container {
@@ -695,7 +575,9 @@ p {
   justify-content: space-evenly;
   justify-items: center;
   align-content: center;
+  align-items: center;
   padding: 0.5rem;
+  user-select: none;
 }
 
 .link-form {
@@ -748,7 +630,6 @@ p {
   margin-right: auto;
   padding: 1rem;
   border-radius: 5px;
-  margin-bottom: 10rem;
 }
 
 .form-content h3 {
@@ -831,24 +712,17 @@ p {
 }
 
 .footer {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: -120vh;
-  left: 0;
   width: 100vw;
   height: 5rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 1rem;
-  background-color: var(--third-color);
+  background-color: var(--third-alpha-color);
   color: var(--gray-light-color);
   text-align: center;
   z-index: 995;
-}
-
-.footer-container {
-  position: relative;
 }
 
 .footer p {
@@ -975,23 +849,7 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
-  .footer {
-    bottom: -50vh;
-  }
-
   .planes-card img[src="img/plan-metro.jpg"] {
     height: 105%;
-  }
-}
-
-@media screen and (min-height: 570px) {
-  .footer {
-    bottom: -90vh;
-  }
-}
-
-@media screen and (min-height: 900px) {
-  .footer {
-    bottom: -60vh;
   }
 }
