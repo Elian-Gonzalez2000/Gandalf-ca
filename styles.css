@@ -198,7 +198,7 @@ p {
 }
 
 .hero-image {
-  background-image: url(img/hero-image-home.jpg);
+  background-image: url(https://i.ibb.co/M2FXxHG/hero-image-home.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -503,7 +503,7 @@ p {
 
 .planes-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin: 0 auto;
   max-width: var(--max-width);
   text-align: center;
@@ -531,7 +531,7 @@ p {
   font-size: 6vw;
 }
 
-.planes-card img[src="img/plan-metro.jpg"] {
+.planes-card img[alt="plan-metro"] {
   height: 56vw;
 }
 
@@ -542,7 +542,7 @@ p {
 }
 
 .contacto .hero-image {
-  background-image: url(img/hero-image-customers.jpg);
+  background-image: url(https://i.ibb.co/fHZZkG1/hero-image-customers.jpg);
   height: 800px;
   min-height: 100vh;
 }
@@ -668,6 +668,11 @@ p {
   max-width: 130px;
   font-weight: bold;
   cursor: pointer;
+  transition: .5s all ease;
+}
+
+.form-content input[type="submit"]:hover {
+  background-color: var(--first-color);
 }
 
 .form-contact [required]:valid {
@@ -760,7 +765,7 @@ p {
     font-size: 1.1rem;
   }
 
-  .planes-card img[src="img/plan-metro.jpg"] {
+  .planes-card img[alt="plan-metro"] {
     height: 80%;
   }
 }
@@ -791,7 +796,7 @@ p {
     font-size: 1.3rem;
   }
 
-  .planes-card img[src="img/plan-metro.jpg"] {
+  .planes-card img[alt="plan-metro"] {
     height: 100%;
   }
 
@@ -843,13 +848,13 @@ p {
     font-size: 1.3rem;
   }
 
-  .planes-card img[src="img/plan-metro.jpg"] {
+  .planes-card img[alt="plan-metro"] {
     height: 86%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .planes-card img[src="img/plan-metro.jpg"] {
+  .planes-card img[alt="plan-metro"] {
     height: 105%;
   }
 }

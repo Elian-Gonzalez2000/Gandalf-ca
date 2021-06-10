@@ -146,9 +146,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
           } else {
             setTimeout(() => {
               $formResponse.classList.add("none");
-              $error.classList.add("none");
               $gracias.classList.add("none");
             }, 3000);
+            setTimeout(() => {
+              $error.classList.add("none");
+            }, 2000);
           }
         });
     });
