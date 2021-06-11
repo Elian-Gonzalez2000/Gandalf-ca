@@ -5,7 +5,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   (() => {
     function hamburguerMenu(menu, menubtn, menuLink) {
       d.addEventListener("click", (e) => {
-        if (e.target.matches(menubtn)) {
+        if (e.target.matches(menubtn) || e.target.matches(`${menubtn} *`)) {
           d.querySelector(menu).classList.toggle("is-active");
           d.querySelector(menubtn).classList.toggle("btn-effect");
         }

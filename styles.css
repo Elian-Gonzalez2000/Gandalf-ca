@@ -248,21 +248,23 @@ p {
   position: fixed;
   bottom: 2vw;
   left: 2vw;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--first-color);
   color: #000;
-  font-size: 3rem;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  border: 3px solid var(--black-color);
-  text-align: center;
-  padding-top: 0.23rem;
-  padding-right: 0.2rem;
-  font-family: sans-serif;
+  border: 2px solid var(--black-color);
   cursor: pointer;
   z-index: 999;
   transition: all 0.5s ease;
+}
+
+.menu-btn svg {
+  width: 2rem;
+  height: 2rem;
 }
 
 .menu-nav {
